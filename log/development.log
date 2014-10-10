@@ -571,3 +571,2944 @@ Connecting to database specified by database.yml
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.860857' WHERE "hours"."id" = 24[0m
   [1m[35m (0.2ms)[0m  COMMIT
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-10-10 13:18:26 -0700
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:18:28 -0700
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/forecast" for 127.0.0.1 at 2014-10-10 13:21:40 -0700
+Processing by ForecastController#index as HTML
+  [1m[35mHour Load (0.2ms)[0m  SELECT "hours".* FROM "hours" 
+Completed 200 OK in 10.9ms (Views: 0.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/forecast/current" for 127.0.0.1 at 2014-10-10 13:21:41 -0700
+Processing by ForecastController#current as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13[0m
+Completed 200 OK in 1.3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:24:45 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.2ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13
+  Rendered main/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 9.8ms
+
+ActionView::Template::Error (undefined method `foggy' for #<ActiveRecord::Relation:0x007fedf5b93d28>):
+    1: <h1><%=@current.foggy%></h1>
+  app/views/main/index.html.erb:1:in `_app_views_main_index_html_erb___2530032223573559349_70330003262520'
+
+
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:24:55 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/api.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled api.css  (3ms)  (pid 68570)
+Compiled application.css  (6ms)  (pid 68570)
+Compiled jquery.js  (3ms)  (pid 68570)
+Compiled jquery_ujs.js  (0ms)  (pid 68570)
+Compiled api.js  (181ms)  (pid 68570)
+Compiled application.js  (199ms)  (pid 68570)
+Completed 200 OK in 233.1ms (Views: 224.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:24:55 -0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:24:55 -0700
+Served asset /api.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:24:55 -0700
+Served asset /jquery.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:24:55 -0700
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:24:55 -0700
+Served asset /api.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:24:55 -0700
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:29:12 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.3ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 9.9ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:29:12 -0700
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:29:12 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:29:12 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:29:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:29:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:29:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:29:25 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 9.7ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:29:25 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:29:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:29:25 -0700
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:29:25 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:29:25 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:29:25 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:31:05 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.3ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 9.9ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:31:05 -0700
+Served asset /application.css - 200 OK (11ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:31:05 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:05 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:05 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:31:23 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 10.9ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:31:23 -0700
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:31:23 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:23 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:31:31 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.3ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 9.2ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:31:31 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:31:31 -0700
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:31 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:31:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:32:50 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 9.7ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:32:50 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:32:50 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:32:50 -0700
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:32:50 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:32:50 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:32:50 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:33:06 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 9.7ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:06 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:33:06 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:33:06 -0700
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:06 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:33:17 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 10.0ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:33:17 -0700
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:17 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:33:17 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:17 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:17 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:17 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:33:21 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 9.3ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:21 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:21 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:33:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:33:21 -0700
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:33:21 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:35:17 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (1ms)  (pid 68570)
+Completed 200 OK in 13.1ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:35:17 -0700
+Served asset /application.css - 200 OK (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:35:17 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:35:17 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:35:17 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:35:17 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:35:17 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:35:42 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.3ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 9.7ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:35:42 -0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:35:42 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:35:42 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:35:42 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:35:42 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:35:42 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:36:15 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 10.0ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:36:15 -0700
+Served asset /application.css - 200 OK (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:36:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:36:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:36:15 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:36:15 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:36:15 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:36:59 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 8.6ms (Views: 7.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:36:59 -0700
+Served asset /application.css - 200 OK (13ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:36:59 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:36:59 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:36:59 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:36:59 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:36:59 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:37:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:37:03 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:37:35 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 8.4ms (Views: 7.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:37:35 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:37:35 -0700
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:37:35 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:37:35 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:37:35 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:37:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:38:22 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 12.2ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:38:22 -0700
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:38:22 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:38:22 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:38:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:38:22 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:38:22 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:39:03 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 9.5ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:39:03 -0700
+Served asset /application.css - 200 OK (14ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:39:03 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:39:03 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:39:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:39:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:39:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:39:21 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled application.css  (1ms)  (pid 68570)
+Completed 200 OK in 15.4ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:39:22 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:39:22 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:39:22 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:39:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:39:22 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:39:22 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:40:41 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 9.4ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:40:41 -0700
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:40:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:40:41 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:40:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:40:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:40:41 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:46:43 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.6ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.5ms)
+Compiled application.css  (1ms)  (pid 68570)
+Completed 200 OK in 16.6ms (Views: 15.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:46:43 -0700
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:46:43 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:46:43 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:46:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:46:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:46:43 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:47:39 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+Compiled application.css  (1ms)  (pid 68570)
+Completed 200 OK in 14.1ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:47:40 -0700
+Served asset /application.css - 200 OK (13ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:47:40 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:47:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:47:40 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:47:40 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:47:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:48:02 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5.1ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:48:02 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:48:02 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:48:02 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:48:02 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:48:02 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:48:02 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:49:47 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (6ms)  (pid 68570)
+Compiled application.css  (9ms)  (pid 68570)
+Completed 200 OK in 23.4ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:49:48 -0700
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:49:48 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:49:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:49:48 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 13:49:48 -0700
+Served asset /main.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:49:48 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 13:49:48 -0700
+Served asset /main - 200 OK (3ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:49:48 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:50:52 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (8ms)  (pid 68570)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 20.9ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:50:52 -0700
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:50:52 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:50:52 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:50:52 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 13:50:52 -0700
+Served asset /main.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:50:52 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:50:52 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 13:50:52 -0700
+Served asset /main - 200 OK (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:51:04 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4.7ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:51:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:51:04 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:51:04 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 13:51:04 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:51:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:51:04 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:51:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 13:51:04 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:53:04 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.5ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (6ms)  (pid 68570)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 19.3ms (Views: 18.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:53:04 -0700
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:53:04 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:53:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:53:04 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 13:53:04 -0700
+Served asset /main.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:53:04 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:53:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 13:53:05 -0700
+Served asset /main - 200 OK (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:53:47 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (8ms)  (pid 68570)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 21.5ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:53:47 -0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:53:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:53:47 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:53:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 13:53:47 -0700
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:53:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:53:47 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 13:53:47 -0700
+Served asset /main - 200 OK (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:54:31 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (5ms)  (pid 68570)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 17.4ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:54:31 -0700
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 13:54:31 -0700
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:54:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:54:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:54:31 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:54:31 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:54:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 13:54:32 -0700
+Served asset /main - 200 OK (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:54:40 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (7ms)  (pid 68570)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 21.1ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:54:40 -0700
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 13:54:40 -0700
+Served asset /main.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:54:40 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:54:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:54:40 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:54:40 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:54:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 13:54:40 -0700
+Served asset /main - 200 OK (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:55:26 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (7ms)  (pid 68570)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 20.3ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:55:26 -0700
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:55:26 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:55:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 13:55:26 -0700
+Served asset /main.css - 200 OK (1ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:55:26 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:55:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:55:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 13:55:26 -0700
+Served asset /main - 200 OK (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:57:19 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (7ms)  (pid 68570)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 19.1ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:57:19 -0700
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 13:57:19 -0700
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:57:19 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:57:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:57:19 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:57:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:57:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 13:57:19 -0700
+Served asset /main - 200 OK (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 13:57:30 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.7ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (6ms)  (pid 68570)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 21.4ms (Views: 19.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:57:30 -0700
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 13:57:30 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 13:57:30 -0700
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at 2014-10-10 13:57:30 -0700
+Served asset /api.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 13:57:30 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 13:57:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:57:30 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 13:57:30 -0700
+Served asset /main - 200 OK (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled cloudgen.js  (0ms)  (pid 68570)
+Compiled kinetic-core.js  (2ms)  (pid 68570)
+Compiled main.js  (102ms)  (pid 68570)
+Compiled application.js  (117ms)  (pid 68570)
+Completed 200 OK in 137.8ms (Views: 136.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Served asset /cloudgen.js - 200 OK (7ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Served asset /kinetic-core.js - 200 OK (1ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Served asset /main.js - 200 OK (4ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:01:39 -0700
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:01:56 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.5ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5.5ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:03:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:08:22 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (146ms)  (pid 68570)
+Compiled application.js  (6ms)  (pid 68570)
+Completed 200 OK in 174.0ms (Views: 173.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:08:22 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:08:22 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:08:22 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:08:22 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:08:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:08:22 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:08:22 -0700
+Served asset /main.js - 200 OK (3ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:08:22 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:08:22 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:08:23 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (150ms)  (pid 68570)
+Compiled application.js  (4ms)  (pid 68570)
+Completed 200 OK in 191.9ms (Views: 190.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Served asset /main.js - 200 OK (36ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:11:01 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (162ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 186.4ms (Views: 185.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Served asset /main.js - 200 OK (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:11:27 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:11:43 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.3ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (156ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 180.8ms (Views: 179.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:11:43 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:11:43 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:11:43 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:43 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:43 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:43 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:43 -0700
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:44 -0700
+Served asset /main.js - 200 OK (4ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:11:44 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:11:44 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:12:10 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (142ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 189.2ms (Views: 187.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:12:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:12:11 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:12:11 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:11 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:11 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:12:11 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:11 -0700
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:11 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:12:26 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (191ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 213.4ms (Views: 212.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:12:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:12:27 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:12:27 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:27 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:27 -0700
+Served asset /main.js - 200 OK (5ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:27 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:27 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:12:27 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:12:48 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (135ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 156.3ms (Views: 155.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:12:49 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:12:49 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:12:49 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:49 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:49 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:49 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:49 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:49 -0700
+Served asset /main.js - 200 OK (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:12:49 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:12:49 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:14:31 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (148ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 171.8ms (Views: 170.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:14:31 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:14:31 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:14:31 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:31 -0700
+Served asset /main.js - 200 OK (8ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:31 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:31 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:32 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:14:32 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:14:51 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (141ms)  (pid 68570)
+Compiled application.js  (3ms)  (pid 68570)
+Completed 200 OK in 231.9ms (Views: 230.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:14:52 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:52 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:14:52 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:52 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:52 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:52 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:52 -0700
+Served asset /main.js - 200 OK (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:14:52 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:14:52 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:14:52 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.6ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (144ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 167.2ms (Views: 165.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Served asset /main.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:17 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (141ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 162.9ms (Views: 161.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:15:37 -0700
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.3ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (149ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 174.0ms (Views: 172.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Served asset /application.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:16:58 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (1.1ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (145ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 169.7ms (Views: 167.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Served asset /main.js - 200 OK (4ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:06 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.5ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (161ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 186.2ms (Views: 184.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Served asset /main.js - 200 OK (3ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:25 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.5ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (149ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 173.3ms (Views: 171.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:17:46 -0700
+Served asset /main.js - 200 OK (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (143ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 220.6ms (Views: 219.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Served asset /main.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:19:05 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (9ms)  (pid 68570)
+Compiled application.css  (0ms)  (pid 68570)
+Completed 200 OK in 24.9ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Served asset /main.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:23:30 -0700
+Served asset /main - 200 OK (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.9ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (142ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 164.9ms (Views: 163.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Served asset /main.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:23:53 -0700
+Served asset /main - 200 OK (8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.6ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (146ms)  (pid 68570)
+Compiled application.js  (3ms)  (pid 68570)
+Completed 200 OK in 169.2ms (Views: 167.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Served asset /main.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:24:15 -0700
+Served asset /main - 200 OK (6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:24:35 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.5ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (145ms)  (pid 68570)
+Compiled application.js  (4ms)  (pid 68570)
+Completed 200 OK in 202.2ms (Views: 200.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:24:36 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:24:36 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:36 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:24:36 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:36 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:24:36 -0700
+Served asset /main - 200 OK (5ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:36 -0700
+Served asset /main.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:36 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (144ms)  (pid 68570)
+Compiled application.js  (3ms)  (pid 68570)
+Completed 200 OK in 166.7ms (Views: 165.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Served asset /main - 200 OK (7ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Served asset /main.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:24:48 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:25:44 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.3ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (137ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 159.1ms (Views: 158.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:25:45 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:25:45 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:25:45 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:25:45 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:25:45 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:25:45 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:25:45 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:25:45 -0700
+Served asset /main - 200 OK (6ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:25:45 -0700
+Served asset /main.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:25:45 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.5ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache /Users/sean/Development/cannuk/isthecityfoggy/tmp/cache/sass/53dc3070b0513f617fcdaf2f699a34dde8b933da/main.css.scssc: can't dump anonymous class #<Class:0x007fedf59a08e0>
+
+Compiled main.css  (12ms)  (pid 68570)
+Compiled application.css  (1ms)  (pid 68570)
+Completed 200 OK in 31.2ms (Views: 29.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Served asset /main - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:26:07 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled application.css  (1ms)  (pid 68570)
+Completed 200 OK in 13.9ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Served asset /api.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Served asset /cloudgen.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Served asset /kinetic-core.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Served asset /main.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 14:37:59 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:01:36 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.5ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (150ms)  (pid 68570)
+Compiled application.js  (4ms)  (pid 68570)
+Completed 200 OK in 183.1ms (Views: 181.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:01:36 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 15:01:36 -0700
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 15:01:36 -0700
+Served asset /api.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:01:36 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 15:01:36 -0700
+Served asset /cloudgen.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:01:36 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:01:36 -0700
+Served asset /kinetic-core.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 15:01:36 -0700
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:01:36 -0700
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:01:37 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (175ms)  (pid 68570)
+Compiled application.js  (2ms)  (pid 68570)
+Completed 200 OK in 201.4ms (Views: 200.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Served asset /main.js - 200 OK (8ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:31 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:02:56 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8.1ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:02:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 15:02:56 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 15:02:56 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:56 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:56 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:56 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:02:56 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:04:55 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (1.1ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7.7ms (Views: 5.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:04:55 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 15:04:55 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 15:04:55 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:04:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 15:04:55 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:04:55 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:04:55 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 15:04:55 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:04:55 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:11:45 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8.0ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:11:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:11:46 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 15:11:46 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 15:11:46 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:11:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 15:11:46 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:11:46 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 15:11:46 -0700
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:11:46 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:12:16 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.4ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (149ms)  (pid 68570)
+Compiled application.js  (3ms)  (pid 68570)
+Completed 200 OK in 174.8ms (Views: 173.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:16 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:16 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:16 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:16 -0700
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:16 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:16 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:12:31 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.5ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (213ms)  (pid 68570)
+Compiled application.js  (7ms)  (pid 68570)
+Completed 200 OK in 245.6ms (Views: 244.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:32 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:32 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:32 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:32 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:32 -0700
+Served asset /main.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:32 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:12:50 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.5ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (153ms)  (pid 68570)
+Compiled application.js  (3ms)  (pid 68570)
+Completed 200 OK in 178.5ms (Views: 177.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:50 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:50 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:50 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:50 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:50 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:50 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:50 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:50 -0700
+Served asset /main.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:50 -0700
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:12:57 -0700
+Processing by MainController#index as HTML
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Compiled main.js  (143ms)  (pid 68570)
+Compiled application.js  (3ms)  (pid 68570)
+Completed 200 OK in 165.4ms (Views: 164.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:57 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:57 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:57 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:57 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 15:12:57 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:57 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:57 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:57 -0700
+Served asset /main.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:12:57 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 15:13:44 -0700
+Processing by MainController#index as HTML
+  [1m[35mHour Load (0.3ms)[0m  SELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled main.js  (147ms)  (pid 68570)
+Compiled application.js  (3ms)  (pid 68570)
+Completed 200 OK in 175.4ms (Views: 174.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at 2014-10-10 15:13:44 -0700
+Served asset /api.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-10 15:13:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 15:13:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-10 15:13:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cloudgen.js?body=1" for 127.0.0.1 at 2014-10-10 15:13:44 -0700
+Served asset /cloudgen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-10 15:13:44 -0700
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kinetic-core.js?body=1" for 127.0.0.1 at 2014-10-10 15:13:44 -0700
+Served asset /kinetic-core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-10 15:13:44 -0700
+Served asset /main.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 15:13:44 -0700
+Served asset /application.js - 304 Not Modified (7ms)

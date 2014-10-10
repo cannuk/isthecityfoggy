@@ -23,8 +23,8 @@ class FogForecast
   end
 
   def get_scores_by_hour
-    # images = Magick::ImageList.new("http://dev.wunderground.com/autobrand/fogmap/topclose/fogmap.gif")
-    images = Magick::ImageList.new("./public/fogmap.gif")
+     images = Magick::ImageList.new("http://dev.wunderground.com/autobrand/fogmap/topclose/fogmap.gif")
+    # images = Magick::ImageList.new("./public/fogmap.gif")
     palette = Palette.from_hex(['ffffff'])
     background = Magick::Image.new(@cols, @rows)
     background.background_color = "red"
