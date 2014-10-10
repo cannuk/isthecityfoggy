@@ -52,9 +52,11 @@ class Fog
     if isFoggy.text().toLowerCase() is "yes" or isFoggy.text().toLowerCase() is "probably"
       $("body").addClass("fog")
       $el = $(".fog-top")
+      $sky = $(".sky")
       @width = $el.width()
       @height = $el.height()
       @stage = new Kinetic.Stage(container: $el.get(0), width: @width, height: @height)
+      $el.css("marginTop", (($el.height()*.66)*-1))
       @draw()
 
   $ (=>
