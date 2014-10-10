@@ -1,5 +1,4 @@
 require 'RMagick'
-require 'Colorscore'
 namespace :clip do
   include Colorscore
   cols = 40
