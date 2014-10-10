@@ -56,7 +56,7 @@ class Fog
       @width = $el.width()
       @height = $el.height()
       @stage = new Kinetic.Stage(container: $el.get(0), width: @width, height: @height)
-      $el.css("marginTop", (($el.height()*.66)*-1))
+      $el.css("marginTop", (($el.height()*.80)*-1))
       @draw()
 
   $ (=>

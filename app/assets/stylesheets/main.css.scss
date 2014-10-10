@@ -23,6 +23,7 @@ body{
 
 .fog-top{
   height: 20%;
+  opacity: .7;
 }
 
 .site-footer {
@@ -44,11 +45,11 @@ body.fog{
   .sky{
     background: #57c1eb;
     background: -moz-linear-gradient(top,  #57c1eb 0%, #246fa8 75%, #f0f0f0 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#57c1eb), color-stop(75%,#246fa8), color-stop(100%,#f0f0f0));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#57c1eb), color-stop(60%,#246fa8), color-stop(80%,#246fa8), color-stop(100%,#f0f0f0));
     background: -webkit-linear-gradient(top,  #57c1eb 0%,#246fa8 75%,#f0f0f0 100%);
     background: -o-linear-gradient(top,  #57c1eb 0%,#246fa8 75%,#f0f0f0 100%);
     background: -ms-linear-gradient(top,  #57c1eb 0%,#246fa8 75%,#f0f0f0 100%);
-    background: linear-gradient(to bottom,  #57c1eb 0%,#246fa8 75%,#f0f0f0 100%);
+    background: linear-gradient(to bottom,  #57c1eb 0%,#246fa8 60%, #246fa8 80%,#f0f0f0 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57c1eb', endColorstr='#f0f0f0',GradientType=0 );
 
     background-repeat: no-repeat;
