@@ -13,6 +13,9 @@ Issanfranciscofoggy::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  match 'forecast' => 'forecast#index'
+  match 'forecast/current' => 'forecast#current'
+
   # Sample resource route with options:
   #   resources :products do
   #     member do

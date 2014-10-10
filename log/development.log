@@ -3,3 +3,571 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (6.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddHours (20141010080347)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.9ms)[0m  [1mCREATE TABLE "hours" ("id" serial primary key, "hour" integer, "foggy" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20141010080347')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddHours (20141010080347)
+Migrating to CreateHours (20141010080708)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.4ms)[0m  [1mCREATE UNIQUE INDEX "index_hours_on_hour" ON "hours" ("hour")[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20141010080708')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddHours (20141010080347)
+Migrating to CreateHours (20141010080708)
+Migrating to SeedHours (20141010081042)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00], ["foggy", nil], ["hour", nil], ["updated_at", Fri, 10 Oct 2014 08:12:02 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20141010081042')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddHours (20141010080347)
+Migrating to CreateHours (20141010080708)
+Migrating to SeedHours (20141010081042)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddHours (20141010080347)
+Migrating to CreateHours (20141010080708)
+Migrating to SeedHours (20141010081042)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 0], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 1], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 2], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 3], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 4], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 5], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 6], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 7], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 8], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 9], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 10], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 11], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 12], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 13], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 14], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 15], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 16], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 17], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 18], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 19], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 20], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 21], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 22], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00], ["foggy", nil], ["hour", 23], ["updated_at", Fri, 10 Oct 2014 08:14:30 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20141010081042')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddHours (20141010080347)
+Migrating to CreateHours (20141010080708)
+Migrating to SeedHours (20141010081042)
+Migrating to ChangeFoggyToText (20141010162315)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (11.9ms)[0m  [1mALTER TABLE "hours" ALTER COLUMN "foggy" TYPE character varying(255)[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20141010162315')
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddHours (20141010080347)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.1ms)[0m  [1mCREATE TABLE "hours" ("id" serial primary key, "hour" integer, "foggy" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20141010080347')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateHours (20141010080708)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_hours_on_hour" ON "hours" ("hour")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20141010080708')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to SeedHours (20141010081042)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (4.7ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 0], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 1], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 2], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 3], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 4], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 5], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 6], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 7], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 8], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 9], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 10], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 11], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 12], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 13], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 14], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 15], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 16], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 17], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 18], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 19], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 20], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 21], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 22], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hours" ("created_at", "foggy", "hour", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00], ["foggy", nil], ["hour", 23], ["updated_at", Fri, 10 Oct 2014 18:18:15 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20141010081042')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to ChangeFoggyToText (20141010162315)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.4ms)[0m  ALTER TABLE "hours" ALTER COLUMN "foggy" TYPE character varying(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20141010162315')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-10-10 11:33:03 -0700
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (4ms)
+
+
+Started GET "/api" for 127.0.0.1 at 2014-10-10 11:33:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/api"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/forecast" for 127.0.0.1 at 2014-10-10 11:52:10 -0700
+Processing by ForecastController#index as HTML
+Completed 500 Internal Server Error in 0.7ms
+
+NameError (uninitialized constant ForecastController::Hours):
+  app/controllers/forecast_controller.rb:4:in `index'
+
+
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/forecast" for 127.0.0.1 at 2014-10-10 11:52:19 -0700
+Processing by ForecastController#index as HTML
+  [1m[36mHour Load (0.5ms)[0m  [1mSELECT "hours".* FROM "hours" [0m
+Completed 200 OK in 27.2ms (Views: 0.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/forecast/current" for 127.0.0.1 at 2014-10-10 11:54:04 -0700
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ForecastController):
+  actionpack (3.2.19) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.19) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.19) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `_run__1791246428208542817__call__1829787166319556375__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/forecast" for 127.0.0.1 at 2014-10-10 11:54:24 -0700
+Processing by ForecastController#index as HTML
+  [1m[35mHour Load (0.2ms)[0m  SELECT "hours".* FROM "hours" 
+Completed 200 OK in 11.4ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/forecast/current" for 127.0.0.1 at 2014-10-10 11:55:26 -0700
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ForecastController):
+  actionpack (3.2.19) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.19) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.19) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `_run__1791246428208542817__call__1829787166319556375__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/forecast" for 127.0.0.1 at 2014-10-10 11:57:10 -0700
+Processing by ForecastController#index as HTML
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" [0m
+Completed 200 OK in 11.3ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/forecast/current" for 127.0.0.1 at 2014-10-10 11:57:15 -0700
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ForecastController):
+  actionpack (3.2.19) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.19) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.19) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `_run__1791246428208542817__call__1829787166319556375__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.3ms)
+
+
+Started GET "/forecast/current" for 127.0.0.1 at 2014-10-10 11:57:57 -0700
+Connecting to database specified by database.yml
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ForecastController):
+  actionpack (3.2.19) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.19) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.19) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.19) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `_run__857944461332573574__call__614551653172256740__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sean/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sean/.rvm/gems/ruby-2.1.2/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/forecast/current" for 127.0.0.1 at 2014-10-10 12:00:08 -0700
+Connecting to database specified by database.yml
+Processing by ForecastController#current as HTML
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 12[0m
+Completed 200 OK in 23.4ms (Views: 0.1ms | ActiveRecord: 4.6ms)
+Connecting to database specified by database.yml
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" [0m
+Connecting to database specified by database.yml
+  [1m[36mHour Load (0.5ms)[0m  [1mSELECT "hours".* FROM "hours" [0m
+Connecting to database specified by database.yml
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 0[0m
+Connecting to database specified by database.yml
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 0[0m
+Connecting to database specified by database.yml
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 0 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-10 19:22:53.444827' WHERE "hours"."id" = 1[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "hours" SET "foggy" = 'probably', "updated_at" = '2014-10-10 19:22:53.450598' WHERE "hours"."id" = 2[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.452391' WHERE "hours"."id" = 3[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.454101' WHERE "hours"."id" = 4[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.455582' WHERE "hours"."id" = 5[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.457071' WHERE "hours"."id" = 6[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 6 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.458461' WHERE "hours"."id" = 7[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.459869' WHERE "hours"."id" = 8[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.461351' WHERE "hours"."id" = 9[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 9 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.462853' WHERE "hours"."id" = 10[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (373.5ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 10 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.838086' WHERE "hours"."id" = 11[0m
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 11 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.841659' WHERE "hours"."id" = 12[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.843627' WHERE "hours"."id" = 13[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.845384' WHERE "hours"."id" = 14[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.846956' WHERE "hours"."id" = 15[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.848573' WHERE "hours"."id" = 16[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 16 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.850166' WHERE "hours"."id" = 17[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 17 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.851647' WHERE "hours"."id" = 18[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 18 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.853141' WHERE "hours"."id" = 19[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 19 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.854594' WHERE "hours"."id" = 20[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 20 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.856121' WHERE "hours"."id" = 21[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 21 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.857743' WHERE "hours"."id" = 22[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.859300' WHERE "hours"."id" = 23[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 23 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'yes', "updated_at" = '2014-10-10 19:22:53.860857' WHERE "hours"."id" = 24[0m
+  [1m[35m (0.2ms)[0m  COMMIT
