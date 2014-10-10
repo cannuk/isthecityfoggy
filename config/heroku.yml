@@ -1,0 +1,6 @@
+development: &defaults
+  # Database access
+  db_name: foggy
+  db_adapter: postgresql
+  db_user: user
+  db_password: password
