@@ -22,7 +22,7 @@ class Fog
   draw: ->
     layer = new Kinetic.Layer()
     cloudDensity = 60
-    segmentSize = Math.floor((@width*2)/cloudDensity)
+    segmentSize = Math.floor((@width*3)/cloudDensity)
     @drawCloud(layer, (Math.floor(Math.random()*(x*segmentSize))), (Math.floor(Math.random()*@height))) for x in [0..cloudDensity]
 
   drawCloud: (layer, x, y) ->
@@ -56,7 +56,7 @@ class Fog
       @width = $el.width()
       @height = $el.height()
       @stage = new Kinetic.Stage(container: $el.get(0), width: @width, height: @height)
-      $el.css("marginTop", (($el.height()*.97)*-1))
+      $el.css("marginTop", (($el.height()*.98)*-1))
       @draw()
 
   $ (=>
