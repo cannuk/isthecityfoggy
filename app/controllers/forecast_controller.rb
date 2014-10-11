@@ -6,7 +6,7 @@ class ForecastController < ApplicationController
 
   def current
     hour = Time.new().hour
-    render :json => Hour.where(:hour => hour).to_json
+    render :json => Hour.where(:hour => hour).order(:hour).to_json
   end
 
 end
