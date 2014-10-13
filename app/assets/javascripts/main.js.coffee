@@ -15,7 +15,7 @@ class Fog
     grid = (((Math.round(Math.random())) for num in [0..width]) for num in [0..height])
     #stormy = {r: 190, g: 195, b:209}
     #mostly cloudy = {r: 239, g: 239, b:239}
-    $cloudgen.drawCloudGroup(context, grid, 40, 40, 25, {r: 240, g: 240, b:240})
+    $cloudgen.drawCloudGroup(context, grid, 40, 40, 25, {r: 240, g: 240, b:240}, .8, 30)
     new Kinetic.Image(image: cloudCanvas, x: x, y: y, opacity: 0)
 
 
