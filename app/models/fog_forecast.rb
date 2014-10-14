@@ -47,7 +47,7 @@ class FogForecast
       cropped.write("./tmp/frame_#{i}.gif")
       histogram = Histogram.new("./tmp/frame_#{i}.gif")
       pallete_score = palette.scores(histogram.scores, 1)
-      hours[(i-2)] = is_foggy pallete_score.first
+      hours[(i-2)] = pallete_score.first
     end
     hours
   end
