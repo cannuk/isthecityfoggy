@@ -1,7 +1,7 @@
 class ForecastController < ApplicationController
 
   def index
-    render :json => Hour.all.to_json, :callback => params['callback']
+    render :json => Hour.order(:hour).all.to_json, :callback => params['callback']
   end
 
   def current
