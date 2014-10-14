@@ -9,4 +9,8 @@ class ForecastController < ApplicationController
     render :json => Hour.where(:hour => hour).order(:hour).to_json, :callback => params['callback']
   end
 
+  def time
+    render :json => {:hour  => Time.now.hour, :min => Time.now.min }, :callback => params['callback']
+  end
+
 end

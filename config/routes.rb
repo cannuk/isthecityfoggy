@@ -15,9 +15,8 @@ Issanfranciscofoggy::Application.routes.draw do
 
   match 'forecast' => 'forecast#index'
   match 'forecast/current' => 'forecast#current'
-  match 'yes' => "main#yes"
-  match 'no' => "main#no"
-  match 'probably' => "main#probably"
+  match 'forecast/time' => 'forecast#time'
+
 
 
   # Sample resource route with options:
