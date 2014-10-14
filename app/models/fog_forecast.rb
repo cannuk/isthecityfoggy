@@ -16,6 +16,7 @@ class FogForecast
     scores.each_with_index do |score, i|
       hour = Hour.where(:hour => i).first
       hour.foggy = is_foggy score
+      hour.update_attribute(:updated_at,Time.now)
       hour.save
 
     end

@@ -12117,3 +12117,148 @@ Served asset /main.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 17:16:53 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36mHour Load (0.4ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 0 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "hours" SET "updated_at" = '2014-10-14 00:52:23.854524' WHERE "hours"."id" = 1[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.860675' WHERE "hours"."id" = 2[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.862843' WHERE "hours"."id" = 3[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.864801' WHERE "hours"."id" = 4[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.866789' WHERE "hours"."id" = 5[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.868894' WHERE "hours"."id" = 6[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 6 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.871452' WHERE "hours"."id" = 7[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.873758' WHERE "hours"."id" = 8[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.876053' WHERE "hours"."id" = 9[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 9 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.877994' WHERE "hours"."id" = 10[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 10 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.879927' WHERE "hours"."id" = 11[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 11 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.881921' WHERE "hours"."id" = 12[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.883894' WHERE "hours"."id" = 13[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 13 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.885723' WHERE "hours"."id" = 14[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 14 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "updated_at" = '2014-10-14 00:52:23.887717' WHERE "hours"."id" = 15[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 15 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "updated_at" = '2014-10-14 00:52:23.889541' WHERE "hours"."id" = 16[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.3ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 16 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "hours" SET "updated_at" = '2014-10-14 00:52:23.891757' WHERE "hours"."id" = 17[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 17 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "updated_at" = '2014-10-14 00:52:23.894386' WHERE "hours"."id" = 18[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 18 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "updated_at" = '2014-10-14 00:52:23.896391' WHERE "hours"."id" = 19[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 19 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "updated_at" = '2014-10-14 00:52:23.898408' WHERE "hours"."id" = 20[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 20 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "foggy" = 'no', "updated_at" = '2014-10-14 00:52:23.900596' WHERE "hours"."id" = 21[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 21 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "updated_at" = '2014-10-14 00:52:23.902755' WHERE "hours"."id" = 22[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "updated_at" = '2014-10-14 00:52:23.904732' WHERE "hours"."id" = 23[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mHour Load (0.2ms)[0m  [1mSELECT "hours".* FROM "hours" WHERE "hours"."hour" = 23 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE "hours" SET "updated_at" = '2014-10-14 00:52:23.906574' WHERE "hours"."id" = 24[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
