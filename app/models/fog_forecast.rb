@@ -8,6 +8,9 @@ class FogForecast
     @x = 200
     @y = 178
     @white = Color::RGB.new(255, 255, 255)
+    @purple = Color::RGB.new(212, 212, 236)
+    @grey = Color::RGB.new(234, 236, 236)
+
   end
 
   def update_forecast
@@ -26,7 +29,7 @@ class FogForecast
   def get_scores_by_hour
      images = Magick::ImageList.new("http://dev.wunderground.com/autobrand/fogmap/topclose/fogmap.gif")
     # images = Magick::ImageList.new("./public/fogmap.gif")
-    palette = Palette.from_hex(['ffffff'])
+    palette = Palette.from_hex(['ffffff', 'D4D4EC', 'EAECEC'])
     background = Magick::Image.new(@cols, @rows)
     background.background_color = "red"
     background.write("./tmp/background.gif")
@@ -43,7 +46,8 @@ class FogForecast
       cropped = cropped_list.flatten_images
       cropped.write("./tmp/frame_#{i}.gif")
       histogram = Histogram.new("./tmp/frame_#{i}.gif")
-      hours[(i-2)] = histogram.scores.first
+      pallete_score = palette.scores(histogram.scores, 1)
+      hours[(i-2)] = is_foggy pallete_score.first
     end
     hours
   end
@@ -57,6 +61,8 @@ class FogForecast
     # More than 75% white, not foggy
     elsif color == @white and threshold >= 0.69
       "probably"
+    elsif color == @purple
+      "no"  #this is overcast, maybe at some point specify that..
     else
       "yes"
     end
